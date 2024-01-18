@@ -1,0 +1,119 @@
+[
+  {
+    "id": 2,
+    "Name": "Mustafa Kemal Atatürk1938",
+    "Parti": "CHP",
+    "ImageSrc": "//upload.wikimedia.org/wikipedia/commons/thumb/a/a8/Ataturk1930s.jpg/100px-Ataturk1930s.jpg"
+  },
+  {
+    "id": 6,
+    "Name": "Abdülhalik Renda",
+    "Parti": "CHP",
+    "ImageSrc": "//upload.wikimedia.org/wikipedia/commons/thumb/f/f4/TBMM_Ba%C5%9Fkan%C4%B1_Abd%C3%BClhalik_Renda.jpg/100px-TBMM_Ba%C5%9Fkan%C4%B1_Abd%C3%BClhalik_Renda.jpg"
+  },
+  {
+    "id": 7,
+    "Name": "İsmet İnönü",
+    "Parti": "CHP",
+    "ImageSrc": "//upload.wikimedia.org/wikipedia/commons/thumb/f/fe/Inonu_Ismet.jpg/100px-Inonu_Ismet.jpg"
+  },
+  {
+    "id": 11,
+    "Name": "Celâl Bayar",
+    "Parti": "DP",
+    "ImageSrc": "//upload.wikimedia.org/wikipedia/commons/thumb/4/45/Mahmut_Celalettin_Bayar.png/100px-Mahmut_Celalettin_Bayar.png"
+  },
+  {
+    "id": 14,
+    "Name": "National Unity CommitteeCemal Gürsel",
+    "Parti": "Military",
+    "ImageSrc": "//upload.wikimedia.org/wikipedia/commons/thumb/3/31/Cemal_G%C3%BCrsel_%281960%29.jpg/100px-Cemal_G%C3%BCrsel_%281960%29.jpg"
+  },
+  {
+    "id": 15,
+    "Name": "Cemal Gürsel",
+    "Parti": "Independent",
+    "ImageSrc": "//upload.wikimedia.org/wikipedia/commons/thumb/3/31/Cemal_G%C3%BCrsel_%281960%29.jpg/100px-Cemal_G%C3%BCrsel_%281960%29.jpg"
+  },
+  {
+    "id": 16,
+    "Name": "İbrahim Şevki Atasagun",
+    "Parti": "Independent"
+  },
+  {
+    "id": 17,
+    "Name": "Cevdet Sunay",
+    "Parti": "Independent",
+    "ImageSrc": "//upload.wikimedia.org/wikipedia/commons/thumb/3/3c/Turkse_chef_Generale_staf_%28Generaal_Sunay%29%2C%2C_Bestanddeelnr_916-7535_%28cropped%29.jpg/100px-Turkse_chef_Generale_staf_%28Generaal_Sunay%29%2C%2C_Bestanddeelnr_916-7535_%28cropped%29.jpg"
+  },
+  {
+    "id": 18,
+    "Name": "Tekin Arıburun",
+    "Parti": "AP",
+    "ImageSrc": "//upload.wikimedia.org/wikipedia/commons/thumb/6/6e/EfT_Z8TXoAEBpx4.jpg/100px-EfT_Z8TXoAEBpx4.jpg"
+  },
+  {
+    "id": 19,
+    "Name": "Fahri Korutürk",
+    "Parti": "Independent"
+  },
+  {
+    "id": 20,
+    "Name": "İhsan Sabri Çağlayangil",
+    "Parti": "AP",
+    "ImageSrc": "//upload.wikimedia.org/wikipedia/commons/thumb/f/f1/Ihsan_Sabri_Caglayangil_%281968%29.jpg/100px-Ihsan_Sabri_Caglayangil_%281968%29.jpg"
+  },
+  {
+    "id": 21,
+    "Name": "National Security CouncilKenan Evren",
+    "Parti": "Military",
+    "ImageSrc": "//upload.wikimedia.org/wikipedia/commons/thumb/0/03/Kenan_Evren_%28cropped%29.png/100px-Kenan_Evren_%28cropped%29.png"
+  },
+  {
+    "id": 22,
+    "Name": "Kenan Evren",
+    "Parti": "Independent",
+    "ImageSrc": "//upload.wikimedia.org/wikipedia/commons/thumb/0/03/Kenan_Evren_%28cropped%29.png/100px-Kenan_Evren_%28cropped%29.png"
+  },
+  {
+    "id": 23,
+    "Name": "Turgut Özal",
+    "Parti": "ANAP",
+    "ImageSrc": "//upload.wikimedia.org/wikipedia/commons/thumb/2/2f/%28Turgut_%C3%96zal%29_Felipe_Gonz%C3%A1lez_ofrece_una_rueda_de_prensa_con_el_primer_ministro_de_Turqu%C3%ADa._Pool_Moncloa._15_de_septiembre_de_1989_%28cropped%29.jpeg/100px-%28Turgut_%C3%96zal%29_Felipe_Gonz%C3%A1lez_ofrece_una_rueda_de_prensa_con_el_primer_ministro_de_Turqu%C3%ADa._Pool_Moncloa._15_de_septiembre_de_1989_%28cropped%29.jpeg"
+  },
+  {
+    "id": 24,
+    "Name": "Hüsamettin Cindoruk",
+    "Parti": "DYP"
+  },
+  {
+    "id": 25,
+    "Name": "Süleyman Demirel",
+    "Parti": "DYP",
+    "ImageSrc": "//upload.wikimedia.org/wikipedia/commons/thumb/1/17/Suleyman_Demirel_1998.jpg/100px-Suleyman_Demirel_1998.jpg"
+  },
+  {
+    "id": 26,
+    "Name": "Ahmet Necdet Sezer",
+    "Parti": "Independent",
+    "ImageSrc": "//upload.wikimedia.org/wikipedia/commons/thumb/1/18/Ahmet_Necdet_Sezer_2006.jpg/100px-Ahmet_Necdet_Sezer_2006.jpg"
+  },
+  {
+    "id": 27,
+    "Name": "Abdullah Gül",
+    "Parti": "AK Party",
+    "ImageSrc": "//upload.wikimedia.org/wikipedia/commons/thumb/2/2e/Abdullah_G%C3%BCl_%28cropped_version%29.jpg/100px-Abdullah_G%C3%BCl_%28cropped_version%29.jpg"
+  },
+  {
+    "id": 28,
+    "Name": "Recep Tayyip Erdoğan",
+    "Parti": "AK Party",
+    "ImageSrc": "//upload.wikimedia.org/wikipedia/commons/thumb/2/2d/Recep_Tayyip_Erdogan_in_Ukraine.jpg/100px-Recep_Tayyip_Erdogan_in_Ukraine.jpg"
+  },
+  {
+    "id": 30,
+    "Name": "Recep Tayyip Erdoğan",
+    "Parti": "AK Party",
+    "ImageSrc": "//upload.wikimedia.org/wikipedia/commons/thumb/2/2d/Recep_Tayyip_Erdogan_in_Ukraine.jpg/100px-Recep_Tayyip_Erdogan_in_Ukraine.jpg"
+  }
+]

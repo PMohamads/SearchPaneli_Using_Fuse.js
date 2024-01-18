@@ -5,9 +5,104 @@ body {
     sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+  background-color: rgb(219, 193, 193);
+}
+.hh{
+  color: blue;
+  border-radius: 50%;
+  padding: 25px;
+  margin-right: 1200px;
+  text-align: center;
 }
 
 code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
 }
+.app-container {
+  position: relative;
+  background-color: aqua;
+}
+
+.search-container {
+  position: absolute;
+  top: 20px; /* Adjust as needed */
+  left: 50%;
+  text-align: center;
+  transform: translateX(-50%);
+  border: 5px solid teal;
+  border-radius: 15px;
+  padding: 12px;
+  font-size: 16px;
+  width: 800px;
+  z-index: 1; /* Set the z-index to ensure it's above the balls */
+}
+
+
+.search-results {
+  list-style: none;
+  padding: 0;
+}
+
+.search-result {
+  display: flex;
+  align-items: center;
+  margin: 10px 0;
+  text-align: left;
+}
+
+.search-result-image {
+  width: 180px; /* Set the width as needed */
+  height: 180px; /* Set the height as needed */
+  margin-right: 20px;
+  cursor: pointer;
+}
+
+.search-result-details {
+  display: flex;
+  flex-direction: column;
+  justify-content: center; /* Center items vertically */
+}
+
+.search-result-title {
+  font-size: 18px;
+  color: blue;
+  font-weight: bold;
+  margin-bottom: 10px; /* Adjust the margin as needed */
+}
+
+.search-result-description {
+  font-size: 14px;
+  color: red;
+  font-weight: bold;
+}
+.search-result-image-container {
+  position: relative;
+}
+.larger-image-container {
+  position: absolute;
+  top: 0;
+  left: calc(100% + 20px); /* Adjust the offset as needed */
+  width: 400px;
+  height: 400px;
+  background: rgba(0, 0, 0, 0.7);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 2; 
+}
+
+.larger-image {
+  max-width: 500px;
+  max-height: 500px;
+  width: 300px;
+  height: 350px;
+  border: 2px solid white;
+  border-radius: 8px;
+  cursor: pointer;
+}
+
+
+
+
+

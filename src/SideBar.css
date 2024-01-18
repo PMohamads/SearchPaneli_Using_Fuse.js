@@ -1,0 +1,113 @@
+*{
+    background-color: aliceblue;
+    margin:0;
+    padding: 0;
+    box-sizing: border-box;
+    
+}
+
+.sidebar {
+  width: 200px;
+  height: 80%;
+  padding: 5px;
+  border-radius: 20px;
+  background-color: #333333ab;
+  color: #fff;
+  position: fixed;
+  top: 0;
+  left: -200px;
+  transition: left 0.3s ease; 
+}
+  
+  .sidebar ul {
+    list-style: none;
+    background-color: rgba(250, 235, 215, 0.671);
+    padding: 0;
+    margin: 0;
+  }
+  
+  .sidebar ul li {
+    cursor: pointer;
+    background-color: antiquewhite;
+    padding: 10px;
+    margin-bottom: 5px;
+    border-radius: 5px;
+    transition: background-color 0.3s ease;
+  }
+  .sidebar.visible {
+    left: 0;
+  }
+  .sidebar.hidden {
+    left: -200px;
+  }
+  
+  .sidebar ul li:hover {
+    background-color: #ddd;
+  }  
+  .main-content {
+    margin-left: 220px;
+    padding: 20px;
+    transition: margin-left 0.3s ease; 
+
+  }
+  .toggle-sidebar-button {
+    position: fixed;
+    top: 3px;
+    left: -79px;
+    z-index: 1;
+  }
+  
+  .main-content.sidebar-hidden {
+    margin-left: 0;
+  }
+
+  span{
+    background-color: transparent;
+    border-color: transparent;
+  }
+  .daire{
+    color: #0d57c59f;
+    font-weight: bolder;
+  }
+  .ucgen{
+    color: rgb(41, 224, 41);
+    font-weight: bolder;
+  }
+  .kare{
+    color: orangered;
+    font-weight: bolder;
+  }
+  .yildiz{
+    color: gold;
+    font-weight: bolder;
+  }
+  .web{
+    color: #53c9d1d7;
+    font-weight: bolder;
+  }
+  .parallex{
+    color: #d44293d7;
+    font-weight: bolder;
+  }
+
+  .karisik{
+    color: #000000d7;
+    font-weight: bolder;
+  }
+
+  button{
+    border:  solid rgb(179, 166, 150);
+    border-radius: 8px;
+    margin-left: 70px;
+    margin-bottom: 5px;
+    margin-top: 5px;
+    color: rgb(238, 146, 26);
+    background-color: rgba(250, 235, 215, 0.795);
+    width: 50px;
+    height: 37px;
+    padding-top: 1px;
+  }
+
+
+
+  

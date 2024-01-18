@@ -1,7 +1,7 @@
 // SearchComponent.jsx
 import React, { useState } from 'react';
 import Fuse from 'fuse.js';
-import jsonData from './moviesData2.json';
+import jsonData from './FilmlerinListesi.json';
 import './index.css';
 
 const SearchComponent = () => {

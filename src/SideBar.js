@@ -1,7 +1,7 @@
 import React,{useState} from "react";
-import './SideBar.css';
+import './SideBar.css';//yanMenü Oluşturan CSS Özelliklerin CSS Dosyasıdırç
 import Karisik from "./Sekiller/Karisik";
-import Ball from "./Sekiller/Daire";
+import Daire from "./Sekiller/Daire";
 import Kare from "./Sekiller/Kare"
 import Ucgen from "./Sekiller/Ucgen"
 import Yildiz from "./Sekiller/Yildiz";
@@ -11,11 +11,13 @@ import Parallax from "./Sekiller/paralellik";
 //import MoviesComponent from "./getdatacompenent";
 //import PresidentsComponent from "./presedent";
 
+
+//Bu bileşeni, bir yan menü (sidebar) ve seçilen bir seçeneğe göre değişen ana içerik alanından oluşmaktadır.
 const SideBar = () => {
-    const [secilensecenek,secilensecenekayarla] = useState(null);
-    const [sidebarGizle, SidebarAyarla] = useState(true);
-    const Ayarla = (secenek) => {secilensecenekayarla(secenek)};
-    const toggleSidebar = () => {SidebarAyarla(!sidebarGizle);};
+    const [secilensecenek,secilensecenekayarla] = useState(null);//state fonksiyonu
+    const [sidebarGizle, SidebarAyarla] = useState(true);//state fonksiyonu
+    const Ayarla = (secenek) => {secilensecenekayarla(secenek)};//Ayarla fonksiyonu, tıklanan seçeneği secilensecenek state'ine set etmek için kullanılır.
+    const toggleSidebar = () => {SidebarAyarla(!sidebarGizle);};// fonksiyonu, yan menünün görünürlüğünü değiştirmek için kullanılır.Yan menü ve içerik bölümü, CSS sınıfları ve koşullu renderlama kullanılarak kontrol edilir.
     return (
         <>
         {!sidebarGizle && (           
@@ -74,7 +76,7 @@ const SideBar = () => {
                     </li>
                     <li onClick={() => Ayarla('G')}>
                     <span className="parallex">
-                        <span class="material-symbols-outlined" >
+                        <span class="material-symbols-outlined" > 
                             diversity_2
                         </span>
                         &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Parallex
@@ -93,10 +95,10 @@ const SideBar = () => {
                 </ul>
             </div>
             <div className="main-content">
-                {secilensecenek === 'A' && <Ball />}
+                {secilensecenek === 'A' && <Daire />}
                 {secilensecenek === 'B' && <Ucgen />}
                 {secilensecenek === 'C' && <Kare />}
-                {secilensecenek === 'D' && <Karisik/>}
+                {secilensecenek === 'D' && <Karisik/>} 
                 {secilensecenek === 'E' && <Yildiz/>}
                 {secilensecenek === 'F' && <ParticlesFirework/>}
                 {secilensecenek === 'G' && <Parallax/>}
@@ -105,4 +107,5 @@ const SideBar = () => {
     );
 }
 
+//Bileşeni App Sayfasında Çağırmak için export Ediyoruz
 export default SideBar;

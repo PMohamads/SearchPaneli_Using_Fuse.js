@@ -1,9 +1,9 @@
-const axios = require('axios');
-const cheerio = require('cheerio');
-const fs = require('fs');
+const axios = require('axios');//Veriler Çekemk için axios kütüphanesini Kullandık.
+const cheerio = require('cheerio');//HTML içeriğini parse etmek cheerio kütüphanesini Kullandık.
+const fs = require('fs');//veriler json dosyasına kayıd etmek için fs Kullandık.
 
-const url = 'https://www.imdb.com/chart/top/';
-const FilmlerinListesi = [];
+const url = 'https://www.imdb.com/chart/top/';//hangi url'den veriler alıncağanı yazıyoruz
+const FilmlerinListesi = [];//Boş Bir Dizi Oluşturup içine gelen verileri yazdırmak için. 
 
 async function getHTML() {
   const headers = {
@@ -11,7 +11,7 @@ async function getHTML() {
   };
 
   try {
-    const { data: html } = await axios.get(url, { headers });
+    const { data: html } = await axios.get(url, { headers });//axios kullanılarak belirtilen URL'den HTML içeriğini çeken asenkron bir fonksiyon tanımlanır.
     return html;
   } catch (error) {
     console.error('Error fetching HTML:', error);
@@ -20,7 +20,7 @@ async function getHTML() {
 }
 
 getHTML().then((res) => {
-  const $ = cheerio.load(res);
+  const $ = cheerio.load(res);//Cheerio kütüphanesi ile HTML içeriğini parse eder ve sonra bu verileri işleyip Hazırlar.
 
   $('ul > li').each((i, element) => {
     if (i > 0) {
@@ -34,18 +34,19 @@ getHTML().then((res) => {
 
       //console.log(Rat2);
       if (Name && Year) {
-        FilmlerinListesi.push({ id: i, Name, Year, ImageSrc });
+        FilmlerinListesi.push({ id: i, Name, Year, ImageSrc });//her döngü iterasyonunda elde edilen verileri Reisler adlı diziye ekler. Veriler, id, Name, Parti ve ImageSrc adlı alanlardan oluşan bir nesne şeklinde push metodu aracılığıyla diziye eklenir.
       }
     }
   });
 
+  //fs.writeFile fonksiyonunu kullanarak Reisler dizisindeki verileri JSON formatında bir dosyaya yazma işlemini gerçekleştirir.
   fs.writeFile('FilmlerinListesi.json', JSON.stringify(FilmlerinListesi), (err) => {
     if (err) {
-      console.log("Error:", err);
+      console.log("Error:", err); // Verileri alırken veya dosyaya yazarken bir hata oluşursa, hatayı konsola yazdırır.
     } else {
-      console.log('Veriler Çalındı');
+      console.log('Veriler Çalındı'); // Veriler başarıyla alınıp dosyaya yazıldıysa, başarı mesajını konsola yazdırır.
     }
   });
 }).catch((error) => {
-  console.error('Error in getHTML:', error);
+  console.error('Error in getHTML:', error);//Promise zinciri içinde herhangi bir yerde bir hata olursa hatayı yazar.
 });

@@ -1,11 +1,11 @@
 import React, { useState, useEffect } from 'react';
-import './sekiller.css';
+import './sekiller.css';//Üçgen Özellikleri içinde Yazılan CSS Dosyası İçe Aktar
 
-const Ucgen = () => {
-  // State to manage the array of shapes
-  const [shapes, setShapes] = useState([]);
+const Ucgen = () => {//Burda React'ın Bileşen Adını Tanımladım
+ 
+  const [shapes, setShapes] = useState([]);//shapes adlı state Değişkeni,setShapes state Değikenini Ayarlamak için Kullanılan Fonkisyondur 
 
-  // Function to create initial shapes and set them in the state
+  //Burda Üçgenin Ana Özellikleri Ayarlanıyor (Sayısı,Hızı,Boyutu...)
   const createInitialShapes = () => {
     const initialShapes = [];
     for (let i = 0; i < 50; i++) {
@@ -19,14 +19,15 @@ const Ucgen = () => {
         shape: 'Ucgen',
       });
     }
-    setShapes(initialShapes);
+    setShapes(initialShapes);//React state hook'u olan setShapes fonksiyonunu kullanarak shapes adlı state değişkenini günceller
   };
 
-  useEffect(() => {
+  useEffect(() => {//Burda useEffect Hook'u Progamın ilk Render Edildiğinde (createInitialShapes) Bu Fonkisyonu Çalıştırır.
     createInitialShapes();
   }, []);
 
-  // Function to change the speed of a shape when clicked
+  //oluşturulan Üçgenin kendisinin Hareket Hızını Rastgele Bir Şekilde değiştiren fonksiyonudur,
+  //Bu Fonkisyon OnClick olayı gerçekleşince çalışır
   const changeSpeed = (id) => {
     setShapes((prevShapes) =>
       prevShapes.map((shape) =>
@@ -41,12 +42,15 @@ const Ucgen = () => {
     );
   };
 
-  // useEffect Kullanarak Üçgenkleri Basıldığında Hareketi Değişterme Fonksiyonudur
+
+  //useEffect Hook'u, her render sonrasında çalışan bir fonksiyonu temsil eder
+  //useEffecti Hook'u Kullanarak belirli bir aralıkta Üçgenlerin pozisyonlarını günceller. 
+  //Eğer bir Üçgen ekranın kenarına ulaşırsa, hızını tersine çevirerek yansıma efekti oluşturur.
   useEffect(() => {
     const interval = setInterval(() => {
       setShapes((prevShapes) =>
         prevShapes.map((shape) => ({
-          ...shape,
+          ...shape,//JavaScript'te spread operatörüdür ve bu ifade, Üçgene Ayarlanan Hız özellikleri Diğer Oluşturulan Üçgenlere kopyalar ki diğer Üçgenleri Aynı Hız Özellikleri Taşısın .
           x: shape.x + shape.xSpeed,
           y: shape.y + shape.ySpeed,
           xSpeed:
@@ -60,29 +64,27 @@ const Ucgen = () => {
         }))
       );
     }, 30);
+    return () => clearInterval(interval);//bileşenin güncellenmesi (unmount) durumunda, bu interval'ı temizlemek Kullandım.
+  }, []); 
 
-    // clearInterval Metodu Kullanarak bileşenin bağlantısı kesildiğinde aralığı temizleme işlevi
-    return () => clearInterval(interval);
-  }, []); //  dependency Boş kalacak temizleme işi bir kerelik yapması için
-
-  // Üçgen Bileşeni Çalıştıran yerdir
+   //JSX içinde Oluşturulan Üçgenin ekrana render eder ve onclick gibi . 
   return (
     <div className="anaclass">
       {shapes.map((shape) => (
         <div
           key={shape.id}
-          className={`${shape.shape}`}
+          className={`${shape.shape}`}//className prop'u, Üçgen adlı CSS sınıfını Daire CSS sınıfı olarak belirlenmiş bir stil kuralları kümesi uygular ve her bir Üçgene bu stili ekler.
           style={{
             width: shape.size,
             height: shape.size,
             left: shape.x,
             top: shape.y,
           }}
-          onClick={() => changeSpeed(shape.id)}
+          onClick={() => changeSpeed(shape.id)}//onclick Olayı Etkinleşiyor
         ></div>
       ))}
     </div>
   );
 };
-
+//Bileşeni Başka Yerden Çağırmak için export Ediyoruz
 export default Ucgen;

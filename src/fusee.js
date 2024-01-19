@@ -1,20 +1,21 @@
-// SearchComponent.jsx
 import React, { useState } from 'react';
-import Fuse from 'fuse.js';
-import jsonData from './FilmlerinListesi.json';
-import './index.css';
+import Fuse from 'fuse.js';//Fuse.js Kütüphanesi Kullanarak film verileri üzerinde hızlı bir arama yapılmasını sağlar.
+import jsonData from './FilmlerinListesi.json';//Çekilen Verileri içeren JSON dosyasıdır.
+import './index.css';//Search Paneli CSS özellikleri içeren Dosyadır.
 
 const SearchComponent = () => {
+  //useState hook'u kullanılarak searchTerm, searchResults ve selectedImage adlı üç state tanımlanmıştır.
   const [searchTerm, setSearchTerm] = useState('');
   const [searchResults, setSearchResults] = useState([]);
   const [selectedImage, setSelectedImage] = useState(null);
 
-  const fuse = new Fuse(jsonData, {
-    keys: ['Name', 'Year', 'ImageSrc'],
+  const fuse = new Fuse(jsonData, {//jsonData adlı bir JSON dosyasından film verilerini içeri alır.
+    keys: ['Name', 'Year', 'ImageSrc'],//Name ve Year ImageSrc Verileri Getiryor.
     includeScore: true,
     threshold: 0.3,
   });
 
+  //handleSearch fonksiyonu, kullanıcının girdiği arama terimine göre arama yapar ve sonuçları searchResults state'ine set eder
   const handleSearch = (e) => {
     const term = e.target.value;
     setSearchTerm(term);
@@ -27,20 +28,19 @@ const SearchComponent = () => {
     }
   };
 
+  //handleImageClick fonksiyonu, bir film resmine tıklanınca, büyük bir versiyonunu görüntülemek için selectedImage state'ini günceller.
   const handleImageClick = (imageSrc) => {
     setSelectedImage(selectedImage === imageSrc ? null : imageSrc);
   };
 
   return (
     <div>
-      <input
+      <input 
         type="text"
-        placeholder="Search..."
+        placeholder="Search..." 
         value={searchTerm}
         onChange={handleSearch}
         className="search-input"
-        style={{fontSize:'20px',paddingLeft:'15px',paddingBottom:'5px',paddingTop:'5px',fontWeight:'1200',color:'black',border:'solid',borderRadius:'20px'}}
-
       />
       <ul className="search-results">
         {searchResults.map((result) => (
@@ -60,7 +60,7 @@ const SearchComponent = () => {
             </div>
             <div className="search-result-details">
               <h3 className="search-result-title">{result.item.Name}</h3>
-              <p className="search-result-description">{result.item.Year}</p>
+              <p className="search-result-description">{result.item.Year}</p> 
             </div>
           </li>
         ))}
@@ -69,4 +69,5 @@ const SearchComponent = () => {
   );
 };
 
+//Bileşeni App Sayfasında Çağırmak için export Ediyoruz
 export default SearchComponent;

@@ -1,9 +1,9 @@
-import SideBar from "./SideBar";
-import SearchComponent from "./fusee";
+import SideBar from "./SideBar";//Yan Menü Şekilleri Seçmek İçin SideBar bileşeni Getiryor
+import SearchComponent from "./fusee";//Arama işlemi Yapan SearchComponent bileşeni Getiryor
 
+//Burda Programızın Ana Bileşeni Render Edilir
 function App() {
     return (
-        
          <div className="app-container">
          <div>
            <SideBar/>
